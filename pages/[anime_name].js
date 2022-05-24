@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Router, { useRouter } from "next/router";
 import { useState } from "react";
 
 export const getStaticPaths = async ()=>{
@@ -26,22 +27,26 @@ export const getStaticProps = async (context) =>{
 }
 const DetailsPage = ({anime}) => {
     const [imgSrc, setImgSrc] = useState(anime.img)
+    const router = useRouter()
+    const {anime_name} = router.query
     return (
-        <>
+        <div className="details-container">
+            <h1 className="titles">{anime_name}</h1>
             <Image src={imgSrc} 
-            height={300} 
-            width={200} 
+            height={400} 
+            width={400} 
             alt={`cover photo of anime}`}
             placeholder="blur"
             blurDataURL={imgSrc }
             onError={()=>setImgSrc("/filler-image.png")}
+            className="anime-image"
             />
             <ul>
             {anime.data.map((value,key)=>(
-                <li key={key}>{value.fact}</li>
+                <li key={key} className="anime-facts">{value.fact}</li>
             ))}
             </ul>
-        </>
+        </div>
     );
 }
 

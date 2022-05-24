@@ -1,11 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Babylonica&family=Lateef&display=swap');
+body,html{
+  margin: 0;
+  padding: 0;
+  background: rgb(174,69,4);
+  background: linear-gradient(0deg, rgba(174,69,4,1) 0%, rgba(247,131,26,1) 50%, rgba(116,53,18,1) 100%);
+}
 *{
   color: #ecdad2;
 }
-h1{
+.titles{
   font-family: 'Babylonica', cursive;
   font-size: 7rem;
   text-shadow: 0 0 10px black;
+  text-transform: capitalize;
+  margin-bottom: 0;
 }
 p,span{
   font-family: 'Lateef', cursive;
@@ -45,4 +53,20 @@ p,span{
 .name-text:hover::after{
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+.details-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  padding: 20px;
+}
+
+.anime-image{
+  border-radius: 10px;
+}
+.anime-facts{
+  margin: 5px;
 }

@@ -4,6 +4,4 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgb(174,69,4);
-  background: linear-gradient(0deg, rgba(174,69,4,1) 0%, rgba(247,131,26,1) 50%, rgba(116,53,18,1) 100%);
 }

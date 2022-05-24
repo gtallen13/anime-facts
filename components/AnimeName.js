@@ -1,7 +1,11 @@
-const AnimeName = ({name}) => {
+
+import Link from 'next/link'
+const AnimeName = ({name, route}) => {
     return (
         <div className="name-wrapper">
-            <span className="name-text">{name}</span>
+            <Link href={`/${route}`}>
+                <span className="name-text">{name}</span>
+            </Link>
         </div>
     );
 }
