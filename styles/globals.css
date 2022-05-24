@@ -1,16 +1,48 @@
-html,
-body {
-  padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Babylonica&family=Lateef&display=swap');
+*{
+  color: #ecdad2;
+}
+h1{
+  font-family: 'Babylonica', cursive;
+  font-size: 7rem;
+  text-shadow: 0 0 10px black;
+}
+p,span{
+  font-family: 'Lateef', cursive;
+  font-size: 2rem;
+  font-weight: 100;
+}
+.subtitle{
+  text-align: center;
+  width: 100%;
+  font-size: 3rem;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+.name-wrapper{
+  text-align: center;
+  margin: 5px;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.name-text{
+  display: inline-block;
+  position: relative;
+  color: #ecdad2;
+  cursor: pointer;
+  text-transform: capitalize;
 }
-
-* {
-  box-sizing: border-box;
+.name-text::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ecdad2;
+  transform-origin: bottom-right;
+  transition: transform 0.25s ease-out;
+}
+.name-text:hover::after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
